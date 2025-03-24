@@ -15,5 +15,5 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v4
+            - name: Performing the pre-build steps
+              uses: ./.github/workflows/pre-build-workflow.yml
