@@ -5,12 +5,14 @@ runs:
     steps:
         - name: Install dependencies
           run: sudo apt-get update && sudo apt-get install -y git build-essential nasm
+          shell: bash
 
         - name: Load .env file
           run: |
               set -a
               source ./.github/workflows/.env
               set +a
+          shell: bash
 
         - name: Download edk2 and its submodules
           run: |
@@ -19,6 +21,7 @@ runs:
               git checkout $EDK2_TAG
               cd ..
               git clone https://github.com/tianocore/edk2-libc edk2/edk2-libc
+          shell: bash
 
         - name: Download Arm GCC cross-compiler
           run: |
@@ -26,6 +29,7 @@ runs:
               cd /opt/cross
               wget https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu.tar.xz
               tar -xf arm-gnu-toolchain-13.2.rel1-x86_64-aarch64-none-linux-gnu.tar.xz
+          shell: bash
 
         - name: Apply RME changes on EDK2
           run: |
@@ -43,3 +47,4 @@ runs:
               then
                   sed -i '/Components/ a \ \ ShellPkg/Application/rme-acs/uefi_app/RmeAcs.inf' ShellPkg/ShellPkg.dsc
               fi
+          shell: bash
