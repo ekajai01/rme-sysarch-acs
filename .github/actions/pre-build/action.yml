@@ -33,6 +33,7 @@ runs:
 
         - name: Apply RME changes on EDK2
           run: |
+              mkdir -p ./edk2/ShellPkg/Application/rme-acs
               mv ./rme/* ./edk2/ShellPkg/Application/rme-acs
               cd edk2
               if ! grep -q RmePalLib "ShellPkg/ShellPkg.dsc"
