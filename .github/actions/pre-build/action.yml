@@ -10,7 +10,7 @@ runs:
         - name: Load .env file
           run: |
               set -a
-              source ./.github/workflows/.env
+              source ./rme/.github/workflows/.env
               set +a
           shell: bash
 
