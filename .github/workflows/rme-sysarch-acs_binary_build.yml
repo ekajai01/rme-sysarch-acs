@@ -16,7 +16,7 @@ jobs:
 
         steps:
             - name: Performing the pre-build steps
-              uses: ./.github/workflows/pre-build-workflow.yml
+              uses: ./.github/actions/pre-build-actions.yml
 
             - name: Set up EDK2 environment and build Rme.efi
               run: |
@@ -42,7 +42,7 @@ jobs:
 
         steps:
             - name: Performing the pre-build steps
-              uses: ./.github/workflows/pre-build-workflow.yml
+              uses: ./.github/actions/pre-build-actions.yml
 
             - name: Set up EDK2 environment and build Rme.efi
               run: |
