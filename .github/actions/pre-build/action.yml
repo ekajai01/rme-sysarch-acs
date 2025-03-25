@@ -34,7 +34,7 @@ runs:
         - name: Apply RME changes on EDK2
           run: |
               cd edk2
-              mv rme/* edk2/ShellPkg/Application/rme-acs
+              mv ./rme/* ./edk2/ShellPkg/Application/rme-acs
               if ! grep -q RmePalLib "ShellPkg/ShellPkg.dsc"
               then
                 sed -i '/LibraryClasses.common/ a \ \ RmePalLib|ShellPkg/Application/rme-acs/platform/pal_uefi/RmePalLib.inf' ShellPkg/ShellPkg.dsc
