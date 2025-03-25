@@ -11,7 +11,7 @@ on:
 
 jobs:
     binary_build_acpi_all:
-        name: RME-ACS Binary build on ACPI target for all suites
+        name: ACPI target for RME issue
         runs-on: ubuntu-latest
 
         steps:
@@ -42,7 +42,7 @@ jobs:
                 if-no-files-found: error
 
     binary_build_acpi_da:
-        name: RME-ACS Binary build on ACPI target for DA suite
+        name: ACPI target for DA issue
         runs-on: ubuntu-latest
 
         steps:
