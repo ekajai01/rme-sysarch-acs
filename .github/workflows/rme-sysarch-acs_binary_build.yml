@@ -21,7 +21,7 @@ jobs:
                   path: 'rme'
 
             - name: Performing the pre-build steps
-              uses: "rme/.github/actions/pre-build"
+              uses: "./rme/.github/actions/pre-build"
 
             - name: Set up EDK2 environment and build Rme.efi
               run: |
@@ -52,7 +52,7 @@ jobs:
                   path: 'rme'
 
             - name: Performing the pre-build steps
-              uses: "rme/.github/actions/pre-build-actions.yml"
+              uses: "./rme/.github/actions/pre-build-actions.yml"
 
             - name: Set up EDK2 environment and build Rme.efi
               run: |
