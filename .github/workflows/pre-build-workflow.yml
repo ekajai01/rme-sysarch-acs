@@ -50,4 +50,3 @@ jobs:
                   then
                       sed -i '/Components/ a \ \ ShellPkg/Application/rme-acs/uefi_app/RmeAcs.inf' ShellPkg/ShellPkg.dsc
                   fi
-
