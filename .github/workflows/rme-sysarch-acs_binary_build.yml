@@ -15,8 +15,13 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout rme-acs repository
+              uses: actions/checkout@v4
+              with:
+                  path: 'rme'
+
             - name: Performing the pre-build steps
-              uses: ./.github/actions/pre-build
+              uses: rme/.github/actions/pre-build
 
             - name: Set up EDK2 environment and build Rme.efi
               run: |
@@ -41,8 +46,13 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Checkout rme-acs repository
+              uses: actions/checkout@v4
+              with:
+                  path: 'rme'
+
             - name: Performing the pre-build steps
-              uses: ./.github/actions/pre-build-actions.yml
+              uses: rme/.github/actions/pre-build-actions.yml
 
             - name: Set up EDK2 environment and build Rme.efi
               run: |
