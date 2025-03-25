@@ -34,7 +34,7 @@ jobs:
               with:
                 name: Rme_acpi_all.efi
                 path: edk2/Build/Shell/DEBUG_GCC49/AARCH64/Rme.efi
-              if-no-files-found: error
+                if-no-files-found: error
 
     binary_build_acpi_da:
         name: RME-ACS Binary build on ACPI target for DA suite
@@ -59,4 +59,4 @@ jobs:
               with:
                 name: Rme_acpi_da.efi
                 path: edk2/Build/Shell/DEBUG_GCC49/AARCH64/Rme.efi
-              if-no-files-found: error
+                if-no-files-found: error
